@@ -30,6 +30,8 @@ const double hbar = 1.0;
 const double m = 2.0;
 const double pi = M_PI;
 
+const char* path = "/Users/mohanraj/Dropbox/Github Projects/On Resume/Quantum Mechanics/Quantum Mechanics/Well";
+
 //Global Count Variables
 int fileCount = 1;
 int threadCount = 1;
@@ -171,7 +173,7 @@ void *print_WF(void *args) {
     getcwd(cwd, sizeof(cwd));
     
     char name[1024];
-    sprintf(name, "/Users/mohanraj/Dropbox/school/Miscellaneous Files/COSMOS/Quantum Mechanics/Quantum Mechanics/Well/schrodinger%i", fileCount);
+    sprintf(name, "%s/schrodinger%i", path, fileCount);
     FILE *fileout = fopen(name, "w");
     
     //Print out square of wavefunction
